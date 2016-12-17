@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^profile/', include('user_profile.urls')),
     url(r'^toefl-learning/', service, name='service'),
     url(r'^about-us/', aboutus, name='aboutus'),
-
+    url(r'^accounts/', include('allauth.urls'))
 ]
