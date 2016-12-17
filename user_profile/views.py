@@ -116,3 +116,4 @@ def Logout(request):
 
 def Increase(request):
     return render(request, 'user_profile/increase.html')
+
