@@ -53,7 +53,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">خدمات دیگر<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">شرکت در آزمون آزمایشی</a></li>
-                        <li><a href="#">نکات آزمون تافل</a></li>
+                        <li><a href="{% url 'service' %}">نکات آزمون تافل</a></li>
                         <li class="etebar"><a href="{% url 'user_profile:increase' %}">افزایش اعتبار</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">مشاوره</a></li>
@@ -66,7 +66,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{% url 'user_profile:logout' %}">Log Out</a></li>
                 <li class="setting">
-                    <a href="{% url 'user_profile:edit' %}" class="setting" > تنضیمات </a>
+                    <a href="{% url 'user_profile:edit' %}" class="setting" > تنظیمات </a>
 
                 </li>
             </ul>
