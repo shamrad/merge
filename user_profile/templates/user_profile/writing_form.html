@@ -20,22 +20,28 @@
 {% block content %}
     <div class="container-fluid">
     <h3>Submit your new Writing to be corrected!</h3>
+        <div class="col-lg-offset-1">
     <p>set time</p><input type="text" id="seconds" name="seconds" value="0" size="2" maxlength="3" /><input type="button" id="btnct" value="Input" />
         <br>
        <p> <span id="hspan">00</span> :
         <span id="minspan">00</span> :
-<span id="secspan">00</span></p><input type="button" value="Start" onclick="countdown()">
-<input type="button" value="Stop" onclick="cdpause()">
-<input type="button" value="Reset" onclick="cdreset()">
+    <span id="secspan">00</span></p><input type="button" value="Start" onclick="countdown()">
+    <input type="button" value="Stop" onclick="cdpause()">
+    <input type="button" value="Reset" onclick="cdreset()">
+            </div>
+        <br>
+        <div id="result" class="col-lg-offset-1">
+    Words: <span id="wordCount">0</span><br/>
+    </div>
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
         <label for="id_title" class="col-sm-2 control-label">Title</label>
         <div class="col-sm-10">
-        <input class="form-control" id="id_title" name="title" placeholder="Enter the title" >
+        <input class="form-control" id="id_title" name="title" placeholder="Enter the title" style="width: 800px" >
         </div>
         </div>
-        <textarea class="form-control col-sm-offset-1" rows="15" placeholder="Enter your text here..." id="id_text" name="text" ></textarea>
+        <textarea class="form-control col-sm-offset-1" rows="15" placeholder="Enter your text here..." id="id_text" name="text" style="width: 1200px"></textarea>
         <br>
         <div class="form-group">
         <div class="col-sm-offset-1 col-sm-10">
@@ -43,9 +49,7 @@
         </div>
         </div>
     </form>
-    <div id="result">
-    Words: <span id="wordCount">0</span><br/>
-    </div>
+
 </div>
 
     </div>
