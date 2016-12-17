@@ -3,8 +3,7 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from model_utils.models import TimeStampedModel
-# from django_jalali.db import models as jmodels
+
 
 class Writing(models.Model):
     author=models.ForeignKey(User)
